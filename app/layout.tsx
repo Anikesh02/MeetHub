@@ -1,4 +1,5 @@
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "@/components/ui/toaster"
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -44,6 +45,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} bg-dark-2 antialiased`}
       >
         {children}
+        <Toaster />
       </body>
       </ClerkProvider>
     </html>
